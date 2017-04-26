@@ -1,0 +1,9 @@
+<form class="newPost">
+  <label for="title"></label>
+  {{input value=title id="title" type="text" placeholder="Blog Title" required=true}}
+  <label for="date"></label>
+  {{input value=date id="date" type="text" placeholder="Date: mm/dd/yy" required=true}}
+  <label for="content"></label>
+  {{input value=content id="content" type="text" placeholder="Blog Content" required=true}}
+  <button {{action 'saveBlog'}} type="submit">Post!</button>
+</form>

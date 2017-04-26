@@ -1,0 +1,12 @@
+<h3>JK LOL ROFL this site isnt secure!</h3>
+<form>
+  <label for="username">Username</label>
+  {{input value=username id="username"}}
+  <label for="password">Password</label>
+  {{input value=password id="password"}}
+  <button {{action 'checkLogin'}}>Submit</button>
+</form>
+
+{{#if correctLogin}}
+  {{#link-to 'write'}}<h2>New Post</h2>{{/link-to}}
+{{/if}}

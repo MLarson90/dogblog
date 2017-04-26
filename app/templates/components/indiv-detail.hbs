@@ -1,0 +1,11 @@
+{{blog.title}}
+{{blog.content}}
+<h2>Comments</h2>
+<ul>
+  {{#each blog.comments as |comment|}}
+    {{showcomment-tile comment=comment}}
+  {{/each}}
+</ul>
+{{#link-to 'index'}}Home{{/link-to}}
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Contact{{/link-to}}
