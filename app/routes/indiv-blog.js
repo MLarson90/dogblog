@@ -13,6 +13,10 @@ export default Ember.Route.extend({
         return blog.save();
       });
       this.transitionTo('indiv-blog', blog);
+    },
+    destroyComment(comment) {
+      comment.destroyRecord();
+      this.transitionTo('indiv-blog');
     }
   }
 });

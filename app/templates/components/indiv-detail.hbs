@@ -3,7 +3,7 @@
 <h2>Comments</h2>
 <ul>
   {{#each blog.comments as |comment|}}
-    {{showcomment-tile comment=comment}}
+    {{showcomment-tile comment=comment destroyComment="destroyComment"}}
   {{/each}}
 </ul>
 {{#link-to 'index'}}Home{{/link-to}}

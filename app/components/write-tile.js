@@ -13,8 +13,6 @@ export default Ember.Component.extend({
       };
       this.sendAction('saveBlog',params);
     },
-    delete(blog){
-      this.sendAction('deleteBlog', blog);
-    }
+    
   }
 });

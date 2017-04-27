@@ -1,10 +1,10 @@
 
-{{write-tile saveBlog="saveBlog" deleteBlog="deleteBlog"}}
-{{#each model as |blog|}}
+{{write-tile saveBlog="saveBlog"}}
+{{#each model.blogs as |blog|}}
   {{blog.title}}
   {{blog.date}}
   {{blog.content}}
-  <button {{action 'delete' blog}}>Delete</button>
+  {{update-tile blog=blog update="update" deleteBlog="deleteBlog"}}
 {{/each}}
 {{#link-to 'index'}}Home{{/link-to}}
 {{#link-to 'about'}}About{{/link-to}}

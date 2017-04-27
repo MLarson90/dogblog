@@ -1,0 +1,14 @@
+{{#if updateShows}}
+<form class="newPost">
+  <label for="edit_title"></label>
+  {{input value=edit_title id="edit_title" type="text" placeholder=blog.title required=true}}
+  <label for="edit_date"></label>
+  {{input value=edit_date id="edit_date" type="text" placeholder=blog.date required=true}}
+  <label for="edit_content"></label>
+  {{input value=edit_content id="edit_content" type="text" placeholder=blog.content required=true}}
+  <button {{action 'update' blog}}>Edit</button>
+</form>
+{{else}}
+  <button {{action 'updatePost'}}>Edit Post</button>
+{{/if}}
+<button {{action 'delete' blog}}>Delete</button>
